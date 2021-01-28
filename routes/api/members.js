@@ -25,7 +25,7 @@ router.post('/' , (req, res) => {
         id: uuid.v4(),
         name: req.body.name,
         email: req.body.email,
-        age: parseInt(req.body.age)
+        age: parseInt(req.body.age) 
    }
 
    if(!newMember.name || !newMember.email || !newMember.age){
@@ -49,7 +49,7 @@ router.put('/:id', (req, res) => {
                 member.email = updateMember.email ? updateMember.email : member.email;
                 member.age = updateMember.age ? updateMember.age : member.age;
 
-                res.json({ msg: 'Member Update', member})
+                res.json({ msg: 'Member Update', member});
             }
         });
     }else{
